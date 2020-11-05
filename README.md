@@ -1,4 +1,4 @@
-### Another Team Oficial Web
+### Another Team Web
 
 ## Project to practice some logic and maths with canvas and 3d graphics.
 
