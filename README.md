@@ -2,7 +2,7 @@
 
 ## Project to practice some logic and maths with canvas and 3d graphics.
 
-Demo: https://anotherteam-khaki.vercel.app/
+Demo: https://anotherteam-khaki.vercel.app/ (note: screen glitch is an effect, not a bug.)
 
 _Not finished yet, project on pause._
 
