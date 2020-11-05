@@ -2,7 +2,7 @@
 
 ## Project to practice some logic and maths with canvas and 3d graphics.
 
-Demo: https://master.dff521m787xyw.amplifyapp.com/
+Demo: https://anotherteam-khaki.vercel.app/
 
 _Not finished yet, project on pause._
 
