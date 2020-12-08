@@ -1,14 +1,13 @@
 import { useEffect, useContext } from 'react'
 import * as THREE from 'three'
 import { useFrame, useLoader, useThree } from 'react-three-fiber'
-import Back from '../../assets/img/wallstar.jpg'
-import { AngleContext } from '../Contexts/AngleContext'
+import Back from '../textures/wallstar.jpg'
+import { AngleContext } from '../../context/AngleContext'
 
-const SceneCamera = () => {
-  const { camera, scene, clock, gl } = useThree()
+export const SceneCamera = () => {
+  const { camera, scene, clock } = useThree()
   const [backtexture] = useLoader(THREE.TextureLoader, [Back])
   const { angle } = useContext(AngleContext)
-  const useMountEffect = (fun) => useEffect(fun, [])
 
   useFrame(() => {
     camera.position.z = 4 - Math.cos(Math.sin(clock.elapsedTime) / 5)
@@ -46,13 +45,10 @@ const SceneCamera = () => {
     }
   })
 
-  useMountEffect(() => {
-    backtexture.anisotropy = gl.capabilities.getMaxAnisotropy()
+  useEffect(() => {
     scene.fog = new THREE.FogExp2(0xFFB468, 0.007)
     scene.background = backtexture
-  })
+  }, [])
 
   return null
 }
-
-export default SceneCamera

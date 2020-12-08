@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { StyledNav, ListUL, ListLi, MenuLinks, Burger } from '../assets/styled-components/StyledNavbar'
-import { AngleContext } from './Contexts/AngleContext'
+import { AngleContext } from '../context/AngleContext'
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false)
@@ -22,7 +22,7 @@ const Navbar = () => {
           <MenuLinks onClick={handleAngle}>Portfolio</MenuLinks>
         </ListLi>
         <ListLi onClick={handleMenu}>
-          <MenuLinks onClick={handleAngle}>Nosotros</MenuLinks>
+          <MenuLinks onClick={handleAngle}>About Me</MenuLinks>
         </ListLi>
         <ListLi onClick={handleMenu}>
           <MenuLinks onClick={handleAngle}>Contacto</MenuLinks>

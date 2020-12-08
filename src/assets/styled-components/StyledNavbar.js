@@ -15,7 +15,8 @@ const navGrow = keyframes`
   100% {
     width: 100%;
     left: 0;
-  }`
+  }
+`
 
 /* /////////////////////////////////////////////// */
 /*                    GENERAL                      */
@@ -34,10 +35,11 @@ export const StyledNav = styled.nav`
   font-family: 'Quantum';
   top:0px;
   z-index: 100;
-  @media (min-width: 630px) {
+  /* background: red; */
+  @media (min-width: 480px) {
     height: 4vw;
   }
-  @media (min-width: 1000px) {
+  @media (min-width: 768px) {
     width: 100%;
     height: 56px;
     position: fixed;

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { MainWrapper } from '../assets/styled-components/StyledSection'
 import { Burger } from '../assets/styled-components/StyledNavbar'
-import { AngleContext } from '../components/Contexts/AngleContext'
+import { AngleContext } from '../context/AngleContext'
 import Hologram from './Hologram'
 import Nurien from '../assets/img/nurien1.png'
 import Uno from '../assets/img/uno1.png'
@@ -20,7 +20,7 @@ const SectionBackground = () => {
               <div className='on2' />
               <div className='on3' />
             </Burger>
-            <Hologram Width='600px' Height='380px' Name='Nurien' Src={Nurien} />
+            <Hologram Width='600px' Height='380px' Name='Nurien' Src={Nurien} link='https://www.nurienstudio.com/' />
             <Hologram Width='600px' Height='380px' Name='Uno' Src={Uno} />
             <Hologram Width='600px' Height='380px' Name='Lorem' Src={Lorem} />
           </MainWrapper>

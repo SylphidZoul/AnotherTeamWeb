@@ -43,6 +43,22 @@ const GlobalStyle = createGlobalStyle`
 	}
 	body {
 		line-height: 1;
+		/* overflow-y: hidden; */
+		&::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black; 
+  border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+  background: var(--mainPink); 
+  border-radius: 10px;
+  border: 2px solid black;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--mainLightPink);
+  } 
 	}
 	ol, ul {
 		list-style: none;

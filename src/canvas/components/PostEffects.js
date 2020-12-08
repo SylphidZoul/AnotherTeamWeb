@@ -5,7 +5,7 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass'
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass'
-import { FXAAShader } from 'three/examples/jsm/shaders/FXAAShader'
+/* import { FXAAShader } from 'three/examples/jsm/shaders/FXAAShader' */
 import { GlitchPass } from './Glitch'
 
 const materials = {}
@@ -14,7 +14,8 @@ const darkenNonBloomed = (obj) =>
   obj.isMesh && !obj.userData.active && ((materials[obj.uuid] = obj.material), (obj.material = darkMaterial))
 const restoreMaterial = (obj) =>
   materials[obj.uuid] && ((obj.material = materials[obj.uuid]), delete materials[obj.uuid])
-export function Effect () {
+
+export const PostEffects = () => {
   const { gl, scene, camera, size } = useThree()
 
   const [bloom, final] = useMemo(() => {
@@ -40,10 +41,10 @@ export function Effect () {
     finalPass.needsSwap = true
     finalComposer.addPass(finalPass)
 
-    const fxaa = new ShaderPass(FXAAShader)
+    /* const fxaa = new ShaderPass(FXAAShader)
     fxaa.material.uniforms.resolution.value.x = 1 / size.width
     fxaa.material.uniforms.resolution.value.y = 1 / size.height
-    finalComposer.addPass(fxaa)
+    finalComposer.addPass(fxaa) */
     const glitch = new GlitchPass()
     finalComposer.addPass(glitch)
 
@@ -61,5 +62,6 @@ export function Effect () {
     scene.traverse(restoreMaterial)
     final.render()
   }, 1)
+
   return null
 }

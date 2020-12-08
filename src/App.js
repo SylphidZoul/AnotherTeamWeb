@@ -1,18 +1,19 @@
 import React from 'react'
 import './App.css'
-import Header3D from './components/Header3D'
+import Canvas3D from './canvas'
 import Navbar from './components/Navbar'
 import GlobalStyle from './assets/styled-components/GlobalStyles'
 import SectionBackground from './components/SectionBackground'
+import { AngleContextProvider } from './context/AngleContext'
 
 const App = () => {
   return (
-    <>
+    <AngleContextProvider>
       <GlobalStyle />
       <Navbar />
-      <Header3D />
+      <Canvas3D />
       <SectionBackground />
-    </>
+    </AngleContextProvider>
   )
 }
 

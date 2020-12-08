@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Canvas } from 'react-three-fiber'
-import { AngleContext } from '../Contexts/AngleContext'
+import { AngleContext } from './AngleContext'
 
 // Context Bridge to canvas tree
 
