@@ -1,8 +1,8 @@
-### Another Team Oficial Web
+### Another Team Web
 
 ## Project to practice some logic and maths with canvas and 3d graphics.
 
-Demo: https://master.dff521m787xyw.amplifyapp.com/
+Demo: https://anotherteam-khaki.vercel.app/ (note: screen glitch is an effect, not a bug.)
 
 _Not finished yet, project on pause._
 
