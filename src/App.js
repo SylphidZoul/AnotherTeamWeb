@@ -1,9 +1,9 @@
 import React from 'react'
 import './App.css'
 import Canvas3D from './canvas'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar/'
 import GlobalStyle from './assets/styled-components/GlobalStyles'
-import SectionBackground from './components/SectionBackground'
+import Portfolio from './routes/Portfolio'
 import { AngleContextProvider } from './context/AngleContext'
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
       <GlobalStyle />
       <Navbar />
       <Canvas3D />
-      <SectionBackground />
+      <Portfolio />
     </AngleContextProvider>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { HologramWindow, HologramWrapper } from '../assets/styled-components/StyledSection'
+import { HologramWindow, HologramWrapper } from './styles'
 
 const Hologram = ({ Width, Height, Name, Src, children, link }) => {
   return (
@@ -12,7 +12,6 @@ const Hologram = ({ Width, Height, Name, Src, children, link }) => {
         </HologramWindow>
       </HologramWrapper>
     </a>
-  )
-}
+  )}
 
 export default Hologram

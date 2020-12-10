@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 	body {
 		line-height: 1;
-		/* overflow-y: hidden; */
+		background-color: var(--mainDark);
 		&::-webkit-scrollbar {
     width: 10px;
   }

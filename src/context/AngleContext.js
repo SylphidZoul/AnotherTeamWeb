@@ -4,15 +4,15 @@ const AngleContext = createContext()
 const { Provider, Consumer } = AngleContext
 
 const AngleContextProvider = (props) => {
-  const [ angle, setAngle ] = useState('Nosotros')
+  const [ cameraAngle, setCameraAngle ] = useState('center')
 
-  const handleAngle = (e) => {
-    if (e.target.textContent === '') setAngle('Nosotros')
-    setAngle(e.target.textContent)
+  const handleCameraAngle = (direction) => {
+    /* if (e.target.textContent === '') setAngle('Nosotros') */
+    setCameraAngle(direction)
   }
 
   return (
-    <Provider value={{angle, handleAngle}}>
+    <Provider value={{cameraAngle, handleCameraAngle}}>
       {props.children}
     </Provider>
   )

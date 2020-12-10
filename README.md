@@ -4,7 +4,7 @@
 
 Demo: https://anotherteam-khaki.vercel.app/ (note: screen glitch is an effect, not a bug.)
 
-_Not finished yet, project on pause._
+_Not finished yet, wip._
 
 ## Tools: 
 

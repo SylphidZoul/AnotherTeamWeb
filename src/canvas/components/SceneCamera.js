@@ -7,15 +7,15 @@ import { AngleContext } from '../../context/AngleContext'
 export const SceneCamera = () => {
   const { camera, scene, clock } = useThree()
   const [backtexture] = useLoader(THREE.TextureLoader, [Back])
-  const { angle } = useContext(AngleContext)
+  const { cameraAngle } = useContext(AngleContext)
 
   useFrame(() => {
     camera.position.z = 4 - Math.cos(Math.sin(clock.elapsedTime) / 5)
     camera.position.x = 0 + -Math.sin(Math.cos(clock.elapsedTime) / 5) * 1.5
     camera.position.y = 2 + Math.cos(Math.sin(clock.elapsedTime)) / 5
 
-    switch (angle) {
-      case 'Portfolio':
+    switch (cameraAngle) {
+      case 'left':
         if (camera.rotation.y < 1.1) {
           if (camera.rotation.y >= 0 && camera.rotation.y < 1.1) {
             camera.rotation.y += 0.018333333
@@ -24,7 +24,7 @@ export const SceneCamera = () => {
           }
         }
         break
-      case 'Contacto':
+      case 'right':
         if (camera.rotation.y > -1.1) {
           if (camera.rotation.y <= 0 && camera.rotation.y > -1.1) {
             camera.rotation.y -= 0.018333333

@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { TextureLoader } from 'three'
-import Sylphid from '../textures/window.png'
 import { useLoader, useFrame, useThree } from 'react-three-fiber'
-import { useGesture } from "react-use-gesture"
-import { useSpring, a } from "@react-spring/three"
+import { useGesture } from 'react-use-gesture'
+import { useSpring, a } from 'react-spring/three'
+import Sylphid from '../textures/window.png'
 
 export const Logo = () => {
   const { clock, size, viewport } = useThree()

@@ -5,11 +5,11 @@ import { AngleContext } from './AngleContext'
 // Context Bridge to canvas tree
 
 const ForwardCanvas = ({ children }) => {
-  const { angle, handleAngle } = useContext(AngleContext)
+  const { cameraAngle, handleCameraAngle } = useContext(AngleContext)
 
   return (
     <Canvas concurrent>
-      <AngleContext.Provider value={{ angle, handleAngle }}>
+      <AngleContext.Provider value={{ cameraAngle, handleCameraAngle }}>
         {children}
       </AngleContext.Provider>
     </Canvas>
