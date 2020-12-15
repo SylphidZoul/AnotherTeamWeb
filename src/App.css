@@ -1,13 +1,13 @@
 :root {
-    --mainPink:#df0a6d;
-    --rgbPink: 223, 10, 109;
-    --mainLightPink: #ee04b4;
-    --rgbLightPink: 238, 4, 180;
-    --mainBlue:#0c14ff;
-    --rgbBlue: 12, 20, 255;
-    --mainDarkBlue: #080eb3;
-    --rgbDarkBlue: 8, 14, 179;
-    --mainWhite:#f6f5f7;
-    --mainDark:#040404;
-    --mainPurple:#6f4ced;
+  --mainPink:#df0a6d;
+  --rgbPink: 223, 10, 109;
+  --mainLightPink: #ee04b4;
+  --rgbLightPink: 238, 4, 180;
+  --mainBlue:#0c14ff;
+  --rgbBlue: 12, 20, 255;
+  --mainDarkBlue: #080eb3;
+  --rgbDarkBlue: 8, 14, 179;
+  --mainWhite:#f6f5f7;
+  --mainDark:#040404;
+  --mainPurple:#6f4ced;
 }

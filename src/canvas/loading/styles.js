@@ -1,20 +1,7 @@
-import styled, { keyframes } from 'styled-components'
-import { animated } from "react-spring"
+import styled from 'styled-components'
+import { animated } from 'react-spring'
+import { dots } from '../../styles/Animations'
 
-const dots = keyframes`
-  0%, 20% {
-    content: '.'
-  }
-  40% {
-    content: '..'
-  }
-  60% {
-    content: '...'
-  }
-  90%, 100% {
-    content: ''
-  }
-`
 
 export const LoadingWrapper = styled(animated.div)`
   width: 320px;

@@ -26,7 +26,7 @@ export const NowLoading = () => {
                       0 0 40px #ee04b4`
         })
       }
-    }, config: { duration: 5000 }
+    }, config: { duration: 2000 }
   })
 
   return (

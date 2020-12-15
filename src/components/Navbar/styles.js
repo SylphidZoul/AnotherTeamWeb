@@ -1,28 +1,12 @@
-import styled, { keyframes } from 'styled-components'
-
-const navGrow = keyframes`
-  0% {
-    width: 0;
-    left: 100%;
-  }
-  70% {
-    width: 10px;
-    left: 0;
-  }
-  100% {
-    width: 100%;
-    left: 0;
-  }
-`
+import styled from 'styled-components'
+import { navGrow } from '../../styles/Animations'
 
 export const StyledNav = styled.nav`
   position: fixed;
   width: 100vw;
   height: 52px;
-  font-family: 'Quantum';
   z-index: 100;
   background: transparent;
-  color: var(--mainWhite);
   @media (min-width: 768px) {
     height: 56px;
     display: flex;
@@ -49,9 +33,9 @@ export const ListUL = styled.ul`
                     100% 5%, 100% 20%, 96% 22%, 96% 38%, 100% 40%,
                     100% 68%, 92% 70%, 92% 93%, 100% 95%, 100% 100%, 0% 100%
   );
-  transition: all 400ms ease-in;
+  transition: all 300ms ease;
   opacity: ${(props) => props.active ? '90%' : '0%'};
-  transform: ${(props) => props.active ? 'scaleX(1)' : 'scaleX(0)'};
+  transform: ${(props) => props.active ? 'traslateX(0%)' : 'translateX(-100%)'};
   box-shadow: 0px 0px 25px 10px var(--mainBlue);
 
   @media (min-width: 480px) {
@@ -81,10 +65,8 @@ export const ListLi = styled.li`
     padding: 0 12px;
     height: 100%;
     transition: all 400ms;
-    cursor: pointer;
     user-select: none;
     &:hover {
-      color: var(--mainLightPink);
       &:before, &:after {
         content: '';
         display: block;
@@ -110,19 +92,29 @@ export const ListLi = styled.li`
     }
   }
 `
-export const MenuLinks = styled.p`
-  font-size: 24px;
+export const MenuLinks = styled.button`
+  height: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: '8Bits';
+  font-size: 12px;
   letter-spacing: 4px;
-  transition: all 200ms ease;
   text-align: center;
+  color: var(--mainWhite);
   text-shadow: 0 0 10px #ee04b4,
                0 0 20px #ee04b4,
                0 0 40px #ee04b4,
                0 0 80px #ee04b4;
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1024px) {
     display: initial;
     text-align: center;
     line-height: 200%;
+    transition: all 1000ms;
+    cursor: pointer;
+    &:hover {
+      color: var(--mainLightPink);
+    }
   }
 `
