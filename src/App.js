@@ -4,6 +4,7 @@ import Canvas3D from './canvas'
 import Navbar from './components/Navbar/'
 import GlobalStyle from './styles/GlobalStyles'
 import Portfolio from './routes/Portfolio'
+import Contact from './routes/Contact'
 import { AngleContextProvider } from './context/AngleContext'
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <Navbar />
       <Canvas3D />
       <Portfolio />
+      <Contact />
     </AngleContextProvider>
   )
 }

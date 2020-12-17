@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { MainWrapper, Title, Subtitle } from '../styles/StyledSection'
+import { MainWrapper, Title, Subtitle } from '../styles/StyledPortfolio'
 import { AngleContext } from '../context/AngleContext'
-import { Projects } from '../data/PortfolioData'
+import { Projects, CoursesProjects } from '../data/PortfolioData'
 import PortfolioItem from '../components/PortfolioItem'
 
 const Portfolio = () => {
@@ -12,7 +12,7 @@ const Portfolio = () => {
       {
         cameraAngle === 'left' && (
           <MainWrapper>
-            <Title>My Portfolio</Title>
+            <Title>Proyectos</Title>
             <Subtitle>Proyectos propios</Subtitle>
             { Projects.map(project => (
               <PortfolioItem
@@ -21,7 +21,7 @@ const Portfolio = () => {
               />
             ))}
             <Subtitle>Proyectos favoritos de cursos</Subtitle>
-            { Projects.map(project => (
+            { CoursesProjects.map(project => (
               <PortfolioItem
                 colorVariant
                 key={project.id + project.name}

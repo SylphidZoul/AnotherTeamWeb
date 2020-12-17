@@ -33,6 +33,7 @@ export const RoundedPeaks = () => {
 
   useEffect(() => {
     generateRandomRoundedMountains()
+    // eslint-disable-next-line
   }, [])
 
   return (

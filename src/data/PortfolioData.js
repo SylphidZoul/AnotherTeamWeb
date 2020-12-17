@@ -3,6 +3,9 @@ import ConfcarAndroid from '../assets/img/confcar-android.jpg'
 import Lorem from '../assets/img/lorem.jpg'
 import Nurien from '../assets/img/nurien.jpg'
 import Sylphid from '../assets/img/sylphiddev.jpg'
+import Petgram from '../assets/img/petgram.jpg'
+import Sockets from '../assets/img/nodeSockets.jpg'
+import CryptoTracker from '../assets/img/cryptoTracker.jpg'
 
 export const Projects = [
   {
@@ -37,7 +40,7 @@ export const Projects = [
   {
     id: 3,
     name: 'lorem',
-    technologies: 'React, StyledComponents, ContextAPI, Node, Express, MongoDB.',
+    technologies: 'React, ContextAPI, Node, Express, MongoDB.',
     URL: 'https://lorem-ecommerce-sylphid.vercel.app/',
     gitURL: 'https://github.com/SylphidZoul/LoremEcommerce',
     screenshot: Lorem,
@@ -54,7 +57,7 @@ export const Projects = [
   {
     id: 4,
     name: 'sylphid',
-    technologies: 'React, WebGL, ThreeJS, StyledComponents.',
+    technologies: 'React, WebGL, ThreeJS.',
     URL: '#',
     gitURL: '#',
     screenshot: Sylphid,
@@ -74,4 +77,42 @@ export const Projects = [
       trabajos destacados. Utiliza Cloudinary como CDN. Al ser de mis primeros proyectos, 
       el responsive necesita reload.` 
   },
+]
+
+export const CoursesProjects = [
+  {
+    id: 1,
+    name: 'petgram',
+    technologies: 'React, StyledComponents, GraphQL',
+    URL: 'https://petgram-sylphid.vercel.app/',
+    gitURL: 'https://github.com/SylphidZoul/petgram-platzi',
+    screenshot: Petgram,
+    description: `Proyecto del curso de React avanzado de Platzi. 
+      Clon sencillo de instagram pero con mascotas que enseña conceptos y buenas 
+      practicas que me ayudaron mucho.`
+  },
+  {
+    id: 2,
+    name: 'queue',
+    technologies: 'Node, Express, Socket.IO',
+    URL: 'https://sockets-cola-node.herokuapp.com/',
+    gitURL: 'https://github.com/SylphidZoul/Aplicacion-Queue',
+    screenshot: Sockets,
+    description: `Uno de los muchos proyectos dentro del curso de Node con el profesor
+      Fernando Herrera en Udemy. Es una app de sistema de tickets para colas, cuenta
+      con una screen para generar tickets, una para ir llamando los tickets a los distintos
+      escritorios y la última para mostrar al público. Utiliza Socket.IO para qué todas
+      las screens se actualizen en tiempo real.`
+  },
+  {
+    id: 3,
+    name: 'crypto',
+    technologies: 'React-Native',
+    URL: 'https://github.com/SylphidZoul/cryptoTracker',
+    gitURL: 'https://github.com/SylphidZoul/cryptoTracker',
+    screenshot: CryptoTracker,
+    description: `Proyecto del curso de React Native de platzi. Trata de una app
+      que consume una API de criptomonedas para mostrar toda la información sobre
+      ellas en una sencilla interfaz.`
+  }
 ]

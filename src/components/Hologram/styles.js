@@ -14,20 +14,23 @@ export const HologramWrapper = styled.div`
     background: var(--mainLightPink);
   }
 
-  &:before{
-    height: 8%;
-    width: 30%;
-    top: -7.8%;
-    left: 4%;
-    clip-path: polygon(18% 0, 82% 0%, 100% 100%, 0% 100%);
-    color: rgba(0, 0, 0, 0.5);
-    content: '${props => props.name}';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
-    font-family: '8Bits';
-  }
+  ${props => props.name && css`
+    &:before{
+      height: 8%;
+      width: 30%;
+      top: -7.8%;
+      left: 4%;
+      clip-path: polygon(18% 0, 82% 0%, 100% 100%, 0% 100%);
+      color: rgba(0, 0, 0, 0.5);
+      content: '${props => props.name}';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 8px;
+      font-family: '8Bits';
+    }
+  `}
+
 
   &:after{
     height: 3%;
@@ -72,8 +75,17 @@ export const HologramWindow = styled.div`
     width: 100%;
   }
 
-  ${props => props.colorVariant  && css`
+  ${props => props.colorVariant && css`
     border: 5px solid var(--mainBlue);
     background: rgba(var(--rgbDarkBlue), 0.4);
+  `}
+
+  ${props => props.vertical && css`
+    clip-path: polygon(
+      0 4%, 4% 0, 43% 0, 48% 2%, 80% 2%, 85% 0,
+      96% 0, 100% 4%, 100% 25%, 96% 30%, 96% 50%,
+      100% 55%, 100% 96%, 96% 100%, 45% 100%,
+      40% 98%, 23% 98%, 18% 100%, 4% 100%, 0 96%
+    );
   `}
 `

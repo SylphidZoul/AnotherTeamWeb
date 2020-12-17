@@ -13,6 +13,7 @@ export const Plane = () => {
     textures.wrapT = THREE.RepeatWrapping
     textures.repeat.set(34, 34)
     ref.current.material.map.needsUpdate = true
+    // eslint-disable-next-line
   }, [])
 
   return (

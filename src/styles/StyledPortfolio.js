@@ -33,10 +33,10 @@ export const Title = styled.h1`
   font-family: '8Bits';
   letter-spacing: 5px;
   font-weight: 400;
-  text-shadow: 0 0 10px #ee04b4,
-               0 0 20px #ee04b4,
-               0 0 40px #ee04b4,
-               0 0 80px #ee04b4;
+  text-shadow: 0 0 10px var(--mainLightPink),
+               0 0 20px var(--mainLightPink),
+               0 0 40px var(--mainLightPink),
+               0 0 80px var(--mainLightPink);
   @media screen and (min-width: 1024px) {
     grid-column: span 2;
   }             
@@ -44,13 +44,14 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.h2`
   text-align: center;
-  font-weight: 500;
-  font-size: 24px;
+  font-family: '8Bits';
+  font-weight: 400;
+  font-size: 12px;
   color: var(--mainWhite);
   text-shadow: 0 0 10px var(--mainBlue),
-  0 0 20px var(--mainBlue),
-  0 0 40px var(--mainBlue),
-  0 0 80px var(--mainBlue);
+               0 0 20px var(--mainBlue),
+               0 0 40px var(--mainBlue),
+               0 0 80px var(--mainBlue);
   @media screen and (min-width: 1024px) {
     grid-column: span 2;
   }

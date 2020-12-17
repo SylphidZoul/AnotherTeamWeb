@@ -31,6 +31,7 @@ export const Peaks = () => {
 
   useEffect(() => {
     generateRandomPeaks()
+    // eslint-disable-next-line
   }, [])
 
   return (

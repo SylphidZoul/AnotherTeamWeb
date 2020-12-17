@@ -48,6 +48,7 @@ export const SceneCamera = () => {
   useEffect(() => {
     scene.fog = new THREE.FogExp2(0xFFB468, 0.007)
     scene.background = backtexture
+    // eslint-disable-next-line
   }, [])
 
   return null
