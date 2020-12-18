@@ -5,32 +5,26 @@ import { Projects, CoursesProjects } from '../data/PortfolioData'
 import PortfolioItem from '../components/PortfolioItem'
 
 const Portfolio = () => {
-  const { cameraAngle } = useContext(AngleContext)
-
   return (
     <>
-      {
-        cameraAngle === 'left' && (
-          <MainWrapper>
-            <Title>Proyectos</Title>
-            <Subtitle>Proyectos propios</Subtitle>
-            { Projects.map(project => (
-              <PortfolioItem
-                key={project.id + project.name}
-                {... project}
-              />
-            ))}
-            <Subtitle>Proyectos favoritos de cursos</Subtitle>
-            { CoursesProjects.map(project => (
-              <PortfolioItem
-                colorVariant
-                key={project.id + project.name}
-                {... project}
-              />
-            ))}
-          </MainWrapper>
-        )
-      }
+      <MainWrapper>
+        <Title>Proyectos</Title>
+        <Subtitle>Proyectos propios</Subtitle>
+        { Projects.map(project => (
+          <PortfolioItem
+            key={project.id + project.name}
+            {... project}
+          />
+        ))}
+        <Subtitle>Proyectos favoritos de cursos</Subtitle>
+        { CoursesProjects.map(project => (
+          <PortfolioItem
+            colorVariant
+            key={project.id + project.name}
+            {... project}
+          />
+        ))}
+      </MainWrapper>
     </>
   )
 }

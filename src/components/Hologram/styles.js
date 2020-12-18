@@ -40,7 +40,7 @@ export const HologramWrapper = styled.div`
     bottom: -2.7%;
   }
 
-  @media (min-width: 1024px){
+  @media screen and (min-width: 1024px){
     &:before{
       font-size: 80%;
     }

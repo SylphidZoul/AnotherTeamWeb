@@ -12,7 +12,7 @@ export const Peaks = () => {
     ref.current.geometry.vertices.forEach(vertice => {
       if (vertice.x > 3 || vertice.x < -3) {
         if (vertice.y < 4 && vertice.y > -6) {
-          vertice.z = (Math.random() > 0.2) ? Math.random() * 7 : 0
+          vertice.z = (Math.random() > 0.1) ? Math.random() * 7 : 0
         } else {
           if (vertice.x > 15 || vertice.x < -15) {
             if (vertice.y < -6) {

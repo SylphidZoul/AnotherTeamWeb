@@ -1,21 +1,26 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './App.css'
 import Canvas3D from './canvas'
 import Navbar from './components/Navbar/'
 import GlobalStyle from './styles/GlobalStyles'
-import Portfolio from './routes/Portfolio'
-import Contact from './routes/Contact'
-import { AngleContextProvider } from './context/AngleContext'
+
+const Portfolio = lazy(() => import('./routes/Portfolio'))
+const Contact = lazy(() => import('./routes/Contact'))
 
 const App = () => {
   return (
-    <AngleContextProvider>
+    <BrowserRouter>
       <GlobalStyle />
       <Navbar />
       <Canvas3D />
-      <Portfolio />
-      <Contact />
-    </AngleContextProvider>
+      <Suspense fallback={null}>
+        <Switch>
+          <Route path='/portfolio' component={Portfolio} />
+          <Route path='/contact' component={Contact} />
+        </Switch>
+      </Suspense>
+    </BrowserRouter>
   )
 }
 

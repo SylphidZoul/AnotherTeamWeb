@@ -16,8 +16,8 @@ export const MainWrapper = styled.div`
     grid-template-columns: minmax(min-content, 352px);
   }
 
-  @media screen and (min-width: 768px) {
-    grid-template: 28px min-content / minmax(min-content, 352px) 330px;
+  @media screen and (min-width: 1024px) {
+    grid-template: 28px min-content / minmax(min-content, 480px) 330px;
     column-gap: 6%;
     padding: 120px 0 40px;
   }
@@ -35,7 +35,7 @@ export const Title = styled.h1`
                0 0 20px var(--mainLightPink),
                0 0 40px var(--mainLightPink),
                0 0 80px var(--mainLightPink);
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     grid-column: span 2;
   }             
 `

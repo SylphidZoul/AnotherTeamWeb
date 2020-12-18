@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import { navGrow } from '../../styles/Animations'
 
 export const StyledNav = styled.nav`
@@ -7,7 +8,9 @@ export const StyledNav = styled.nav`
   height: 52px;
   z-index: 100;
   background: transparent;
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    width: 100%;
     height: 56px;
     display: flex;
     flex-direction: row;
@@ -38,10 +41,10 @@ export const ListUL = styled.ul`
   transform: ${(props) => props.active ? 'traslateX(0%)' : 'translateX(-100%)'};
   box-shadow: 0px 0px 25px 10px var(--mainBlue);
 
-  @media (min-width: 480px) {
+  @media screen and (min-width: 480px) {
     width: 40%;
   }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 100%;
     height: 100%;
     opacity: 100%;
@@ -60,12 +63,14 @@ export const ListUL = styled.ul`
 `
 
 export const ListLi = styled.li`
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     position: relative;
     padding: 0 12px;
     height: 100%;
     transition: all 400ms;
     user-select: none;
+    display: flex;
+    align-items: center;
     &:hover {
       &:before, &:after {
         content: '';
@@ -92,11 +97,8 @@ export const ListLi = styled.li`
     }
   }
 `
-export const MenuLinks = styled.button`
-  height: 100%;
-  border: none;
-  outline: none;
-  background: none;
+export const MenuLinks = styled(Link)`
+  text-decoration: none;
   font-family: '8Bits';
   font-size: 12px;
   letter-spacing: 4px;
@@ -107,12 +109,11 @@ export const MenuLinks = styled.button`
                0 0 40px #ee04b4,
                0 0 80px #ee04b4;
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     display: initial;
     text-align: center;
     line-height: 200%;
     transition: all 1000ms;
-    cursor: pointer;
     &:hover {
       color: var(--mainLightPink);
     }

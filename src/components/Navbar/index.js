@@ -1,11 +1,9 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { StyledNav, ListUL, ListLi, MenuLinks } from './styles'
-import { AngleContext } from '../../context/AngleContext'
 import { Burger } from '../Burger'
 
 const Navbar = () => {
   const [ showMenu, setShowMenu ] = useState(false)
-  const { handleCameraAngle } = useContext(AngleContext)
 
   const handleMenu = () => {
     setShowMenu(prev => !prev)
@@ -17,21 +15,21 @@ const Navbar = () => {
       <ListUL active={showMenu}>
         <ListLi onClick={handleMenu}>
           <MenuLinks
-            onClick={() => handleCameraAngle('left')}
+            to='/portfolio'
           >
             Portfolio
           </MenuLinks>
         </ListLi>
         <ListLi onClick={handleMenu}>
           <MenuLinks
-            onClick={() => handleCameraAngle('center')}
+            to='/about'
           >
             About Me
           </MenuLinks>
         </ListLi>
         <ListLi onClick={handleMenu}>
           <MenuLinks
-            onClick={() => handleCameraAngle('right')}
+            to='/contact'
           >
             Contact
           </MenuLinks>

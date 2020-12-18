@@ -8,6 +8,10 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    padding: 32px 68px 20px 60px;
+  }
 `
 
 export const H3 = styled.h3`
@@ -52,7 +56,7 @@ export const Label = styled.label`
   height: 16px;
   background: var(--mainBlue);
   left: 0px;
-  color: rgba(04, 04, 04, 0.6);
+  color: rgba(240, 240, 240, 0.8);
   font-size: 8px;
   font-family: '8bits';
   letter-spacing: 1.25px;

@@ -23,6 +23,7 @@ export const MainWrapper = styled.div`
   @media screen and (min-width: 1024px) {
     grid-template-columns: repeat(2, minmax(min-content, 512px));
     grid-row-gap: 80px;
+    grid-column-gap: 6%;
   }
 `
 

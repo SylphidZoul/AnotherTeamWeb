@@ -1,7 +1,8 @@
 import React, { Suspense } from 'react'
 import { MainWrapper } from './styles'
-import ForwardCanvas from '../context/ContextCanvas'
+import { Canvas } from 'react-three-fiber'
 import { NowLoading } from './loading/index'
+import { useLocation } from 'react-router-dom'
 
 import { SceneCamera } from './components/SceneCamera'
 import { Plane } from './components/Plane'
@@ -12,23 +13,25 @@ import { Peaks } from './components/Peaks'
 import { PostEffects } from './components/PostEffects'
 
 const Canvas3D = () => {
+  const location = useLocation()
+
   return (
     <MainWrapper>
-      <ForwardCanvas>
+      <Canvas>
+        <ambientLight />
+        <hemisphereLight />
+        <PostEffects />
         <Suspense fallback={
           <NowLoading />
         }>
-          <ambientLight />
-          <hemisphereLight />
-          <SceneCamera />
+          <SceneCamera location={location} />
           <Plane />
           <Sun />
           <RoundedPeaks />
           <Peaks />
           <Logo />
-          <PostEffects />
         </Suspense>
-      </ForwardCanvas>
+      </Canvas>
     </MainWrapper>
   )
 }

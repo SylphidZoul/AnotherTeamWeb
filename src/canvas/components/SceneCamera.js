@@ -1,21 +1,20 @@
-import { useEffect, useContext } from 'react'
+import { useEffect } from 'react'
 import * as THREE from 'three'
 import { useFrame, useLoader, useThree } from 'react-three-fiber'
 import Back from '../textures/wallstar.jpg'
-import { AngleContext } from '../../context/AngleContext'
 
-export const SceneCamera = () => {
+
+export const SceneCamera = ({ location }) => {
   const { camera, scene, clock } = useThree()
   const [backtexture] = useLoader(THREE.TextureLoader, [Back])
-  const { cameraAngle } = useContext(AngleContext)
 
   useFrame(() => {
     camera.position.z = 4 - Math.cos(Math.sin(clock.elapsedTime) / 5)
     camera.position.x = 0 + -Math.sin(Math.cos(clock.elapsedTime) / 5) * 1.5
     camera.position.y = 2 + Math.cos(Math.sin(clock.elapsedTime)) / 5
 
-    switch (cameraAngle) {
-      case 'left':
+    switch (location.pathname) {
+      case '/portfolio':
         if (camera.rotation.y < 1.1) {
           if (camera.rotation.y >= 0 && camera.rotation.y < 1.1) {
             camera.rotation.y += 0.018333333
@@ -24,7 +23,7 @@ export const SceneCamera = () => {
           }
         }
         break
-      case 'right':
+      case '/contact':
         if (camera.rotation.y > -1.1) {
           if (camera.rotation.y <= 0 && camera.rotation.y > -1.1) {
             camera.rotation.y -= 0.018333333

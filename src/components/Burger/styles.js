@@ -20,7 +20,7 @@ export const BurgerDiv = styled.div`
   z-index: 10;
   cursor: pointer;
   
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     display: ${props => props.modal ? 'inline' : 'none'};
     position: fixed;
     left: 2%;
