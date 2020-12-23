@@ -45,7 +45,7 @@ export const HologramWrapper = styled.div`
     }
   }
 
-  ${props => props.colorVariant  && css`
+  ${props => props.colorVariant && css`
     filter: drop-shadow(0px 0px 12px var(--mainDarkBlue));
     &:before, &:after{
       background: var(--mainBlue);

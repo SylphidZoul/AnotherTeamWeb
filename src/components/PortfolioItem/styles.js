@@ -16,7 +16,7 @@ export const StyledScreenshot = styled.img`
   opacity: 0;
   animation: ${openHologram} 1s ease-in 0.9s forwards;
 
-  ${props => props.colorVariant  && css`
+  ${props => props.colorVariant && css`
     border: 3px inset var(--mainBlue);
   `}
 `
@@ -52,13 +52,47 @@ export const InfoContent = styled.div`
   opacity: 0;
   animation: ${openHologram} 1s ease-in 0.9s forwards;
 
-  ${props => props.colorVariant  && css`
+  ${props => props.colorVariant && css`
     border: 3px inset var(--mainBlue);
   `}
+`
+
+export const P = styled.p`
+  text-align: center;
+  color: white;
+  line-height: 24px;
+  padding: 8px;
+`
+
+export const Strong = styled.strong`
+  font-family: '8Bits';
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-shadow: ${props => props.colorVariant
+    ? '0 0 6px var(--mainLightPink)'
+    : '0 0 8px var(--mainBlue)'
+  };
+`
+
+export const Hr = styled.hr`
+  width: 50%;
+  border: none;
+  border-top: 1px solid var(--mainWhite);
+  opacity: 0.2;
+  margin-bottom: 16px;
 `
 
 export const Icon = styled.img`
   width: 32px; 
   border: none;
   margin: 0 8px;
+  @media screen and (min-width: 1024px) {
+    &:hover {
+      filter: ${props => props.colorVariant
+        ? 'drop-shadow(0px 0px 10px var(--mainBlue))'
+        : 'drop-shadow(0px 0px 10px var(--mainLightPink))'
+      };
+    }
+  }
 `

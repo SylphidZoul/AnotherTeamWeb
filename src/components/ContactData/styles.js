@@ -34,6 +34,13 @@ export const Anchor = styled.a`
   text-decoration: none;
   color: var(--mainWhite);
   font-size: 14px;
+
+  @media screen and (min-width: 1024px){
+    &:hover {
+      text-shadow: 0 0 10px var(--mainLightPink),
+                  0 0 20px var(--mainLightPink);
+    }
+  }
 `
 
 export const Icon = styled.img`

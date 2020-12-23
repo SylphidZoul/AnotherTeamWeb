@@ -1,4 +1,4 @@
-import { Item, InfoWrapper, InfoHologram, StyledScreenshot, InfoContent, Icon } from './styles'
+import { Item, InfoWrapper, InfoHologram, StyledScreenshot, InfoContent, P, Strong, Hr, Icon } from './styles'
 import GitHub from '../../assets/img/github.png'
 import DirectLink from '../../assets/img/link.png'
 import { Hologram } from '../Hologram'
@@ -17,15 +17,17 @@ const PortfolioItem = ({
       <InfoWrapper colorVariant={colorVariant}>
         <InfoHologram colorVariant={colorVariant}>
           <InfoContent colorVariant={colorVariant}>
-            <p><strong>Tecnologías principales:</strong> {technologies}</p>
-            <br />
-            <p>{description}</p>
-            <br />
+            <P>
+              Tecnologías principales:<br />
+              <Strong colorVariant={colorVariant}>{technologies}</Strong>
+            </P>
+            <P>{description}</P>
+            <Hr />
             <a href={gitURL} target='_blank' rel='noopener noreferrer'>
-              <Icon src={GitHub} alt='Github' />
+              <Icon src={GitHub} alt='Github' colorVariant={colorVariant} />
             </a>
             <a href={URL} target='_blank' rel='noopener noreferrer'>
-              <Icon src={DirectLink} alt={name} />
+              <Icon src={DirectLink} alt={name} colorVariant={colorVariant} />
             </a>
           </InfoContent>
         </InfoHologram>

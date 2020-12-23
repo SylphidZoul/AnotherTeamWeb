@@ -10,9 +10,11 @@ const About = () => {
   return (
     <SectionLayout title='Sylphid'>
       <AboutBio />
-      <Hologram vertical>
-        <Image src={Profile} alt='Juan Cruz' />
-      </Hologram>
+      <div>
+        <Hologram vertical>
+          <Image src={Profile} alt='Juan Cruz' />
+        </Hologram>
+      </div>
       <Hologram>
         <IconsContainer name='Tecnologias' iconsData={TechStack} />
       </Hologram>
