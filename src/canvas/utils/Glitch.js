@@ -14,7 +14,7 @@ import { Pass } from 'three/examples/jsm/postprocessing/Pass.js'
 import { DigitalGlitch } from 'three/examples/jsm/shaders/DigitalGlitch.js'
 import * as THREE from 'three'
 
-const GlitchPass = function (dt_size) {
+const GlitchPass = function (dtSize) {
   Pass.call(this)
 
   if (DigitalGlitch === undefined) console.error('GlitchPass relies on DigitalGlitch')
@@ -22,9 +22,9 @@ const GlitchPass = function (dt_size) {
   const shader = DigitalGlitch
   this.uniforms = UniformsUtils.clone(shader.uniforms)
 
-  if (dt_size === undefined) dt_size = 64
+  if (dtSize === undefined) dtSize = 64
 
-  this.uniforms.tDisp.value = this.generateHeightmap(dt_size)
+  this.uniforms.tDisp.value = this.generateHeightmap(dtSize)
 
   this.material = new ShaderMaterial({
     uniforms: this.uniforms,
@@ -85,18 +85,18 @@ GlitchPass.prototype = Object.assign(Object.create(Pass.prototype), {
     this.randX = MathUtils.randInt(120, 240)
   },
 
-  generateHeightmap: function (dt_size) {
-    const data_arr = new Float32Array(dt_size * dt_size * 3)
-    const length = dt_size * dt_size
+  generateHeightmap: function (dtSize) {
+    const dataArr = new Float32Array(dtSize * dtSize * 3)
+    const length = dtSize * dtSize
 
     for (let i = 0; i < length; i++) {
       const val = MathUtils.randFloat(0, 1)
-      data_arr[i * 3 + 0] = val
-      data_arr[i * 3 + 1] = val
-      data_arr[i * 3 + 2] = val
+      dataArr[i * 3 + 0] = val
+      dataArr[i * 3 + 1] = val
+      dataArr[i * 3 + 2] = val
     }
 
-    return new DataTexture(data_arr, dt_size, dt_size, RGBFormat, FloatType)
+    return new DataTexture(dataArr, dtSize, dtSize, RGBFormat, FloatType)
   }
 
 })

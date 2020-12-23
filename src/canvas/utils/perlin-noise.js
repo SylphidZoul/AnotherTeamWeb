@@ -51,6 +51,7 @@ class Perlin {
     // For the 2D case, the simplex shape is an equilateral triangle.
     // Determine which simplex we are in.
     let i1, j1 // Offsets for second (middle) corner of simplex in (i,j) coords
+    // eslint-disable-next-line brace-style
     if (x0 > y0) { i1 = 1; j1 = 0 } // lower triangle, XY order: (0,0)->(1,0)->(1,1)
     else { i1 = 0; j1 = 1 } // upper triangle, YX order: (0,0)->(0,1)->(1,1)
     // A step of (1,0) in (i,j) means a step of (1-c,-c) in (x,y), and
