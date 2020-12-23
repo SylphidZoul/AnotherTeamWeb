@@ -6,8 +6,8 @@ import Square from '../textures/square.png'
 import { useToggleColor } from '../../hooks/useToggleColor'
 
 export const RoundedPeaks = () => {
-  const [ texture ] = useLoader(THREE.TextureLoader, [Square])
-  const [ planeGeo ] = useToggleColor()
+  const [texture] = useLoader(THREE.TextureLoader, [Square])
+  const [planeGeo] = useToggleColor()
 
   const generateRandomRoundedMountains = () => {
     const perlin = new Perlin()
