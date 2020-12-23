@@ -28,7 +28,6 @@ export const navGrow = keyframes`
   }
 `
 
-
 export const dots = keyframes`
   0%, 20% {
     content: '.'

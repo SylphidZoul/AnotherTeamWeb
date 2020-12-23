@@ -3,7 +3,6 @@ import * as THREE from 'three'
 import { useFrame, useLoader, useThree } from 'react-three-fiber'
 import Back from '../textures/wallstar.jpg'
 
-
 export const SceneCamera = ({ location }) => {
   const { camera, scene, clock } = useThree()
   const [backtexture] = useLoader(THREE.TextureLoader, [Back])
