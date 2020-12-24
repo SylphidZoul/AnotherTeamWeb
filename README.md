@@ -2,7 +2,15 @@
 
 ## Design inspired by retro synthwave.
 
-Demo: [JCruzCardozo.com](jcruzcardozo.com/) (note: screen glitch is an effect, not a bug.)
+Production: [JCruzCardozo.com](jcruzcardozo.com/) (note: screen glitch is an effect, not a bug.)
+
+## Some development's pics
+
+![ScreenShot1](./screenshots/screenshot1.jpeg)
+![ScreenShot2](./screenshots/screenshot2.jpeg)
+![ScreenShot3](./screenshots/screenshot3.jpeg)
+![ScreenShot4](./screenshots/screenshot4.jpeg)
+![ScreenShot5](./screenshots/screenshot5.jpeg)
 
 ## Tools: 
 
