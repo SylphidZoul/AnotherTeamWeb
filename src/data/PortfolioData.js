@@ -6,6 +6,7 @@ import Sylphid from '../assets/img/sylphiddev.jpg'
 import Petgram from '../assets/img/petgram.jpg'
 import Sockets from '../assets/img/nodeSockets.jpg'
 import CryptoTracker from '../assets/img/cryptoTracker.jpg'
+import Avocado from '../assets/img/avocado.jpg'
 
 export const Projects = [
   {
@@ -42,7 +43,7 @@ export const Projects = [
   {
     id: 4,
     name: 'confcar',
-    technologies: 'React-Native, Redux, Jest, Node, Express, MySQL',
+    technologies: 'React Native, Redux, Jest, Node, Express, MySQL',
     URL: 'https://github.com/SylphidZoul/Confcar-AndroidClient/blob/master/readme.md',
     gitURL: 'https://github.com/SylphidZoul/Confcar-AndroidClient',
     screenshot: ConfcarAndroid,
@@ -77,7 +78,7 @@ export const CoursesProjects = [
   {
     id: 2,
     name: 'queue',
-    technologies: 'Node, Express, Socket.IO',
+    technologies: 'Node, Express, SocketIO',
     URL: 'https://sockets-cola-node.herokuapp.com/',
     gitURL: 'https://github.com/SylphidZoul/Aplicacion-Queue',
     screenshot: Sockets,
@@ -88,12 +89,22 @@ export const CoursesProjects = [
   {
     id: 3,
     name: 'crypto',
-    technologies: 'React-Native',
+    technologies: 'React Native',
     URL: 'https://github.com/SylphidZoul/cryptoTracker',
     gitURL: 'https://github.com/SylphidZoul/cryptoTracker',
     screenshot: CryptoTracker,
     description: `Proyecto del curso de React Native de platzi. Consta de una app
       que consume una API de criptomonedas para mostrar toda la información sobre
       ellas en una sencilla interfaz.`
+  },
+  {
+    id: 4,
+    name: 'avocado',
+    technologies: 'React, NextJS, TypeScript, ContextAPI',
+    URL: 'https://avocadonext.sylphidzoul.vercel.app/',
+    gitURL: 'https://github.com/SylphidZoul/NextJS-Fundamentals',
+    screenshot: Avocado,
+    description: `Proyecto con NextJS. Donde implementamos Server Side Rendering y 
+      Static Site Generator, consumiendo datos desde la misma API interna que nos proporciona NextJS.`
   }
 ]
