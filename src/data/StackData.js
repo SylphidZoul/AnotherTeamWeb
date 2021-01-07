@@ -4,9 +4,11 @@ import BilJavascript from '@meronex/icons/bi/BilJavascript'
 import MdcLanguageTypescript from '@meronex/icons/mdc/MdcLanguageTypescript'
 import BilReact from '@meronex/icons/bi/BilReact'
 import BilRedux from '@meronex/icons/bi/BilRedux'
+import SiNextDotJs from '@meronex/icons/si/SiNextDotJs'
 import BilNodejs from '@meronex/icons/bi/BilNodejs'
 import SiMysql from '@meronex/icons/si/SiMysql'
 import SiMongodb from '@meronex/icons/si/SiMongodb'
+import SiGraphql from '@meronex/icons/si/SiGraphql'
 import SiGit from '@meronex/icons/si/SiGit'
 import SiPostman from '@meronex/icons/si/SiPostman'
 import SiUbuntu from '@meronex/icons/si/SiUbuntu'
@@ -54,36 +56,48 @@ export const TechStack = [
   },
   {
     id: 7,
+    icon: SiNextDotJs,
+    size: '44px',
+    name: 'NextJS'
+  },
+  {
+    id: 8,
     icon: BilNodejs,
     size: '52px',
     name: 'NodeJS'
   },
   {
-    id: 8,
+    id: 9,
     icon: SiMysql,
     size: '52px',
     name: 'MySQL'
   },
   {
-    id: 9,
+    id: 10,
     icon: SiMongodb,
     size: '44px',
     name: 'MongoDB'
   },
   {
-    id: 10,
+    id: 11,
+    icon: SiGraphql,
+    size: '44px',
+    name: 'Graphql'
+  },
+  {
+    id: 12,
     icon: SiJest,
     size: '44px',
     name: 'Jest'
   },
   {
-    id: 11,
+    id: 13,
     icon: SiStyledComponents,
     size: '52px',
     name: 'StyledComponents'
   },
   {
-    id: 12,
+    id: 14,
     icon: SiElectron,
     size: '48px',
     name: 'Electron'
@@ -113,6 +127,6 @@ export const Enviroment = [
     id: 4,
     icon: SiVisualstudio,
     size: '44px',
-    name: 'VisualStudio'
+    name: 'VisualStudioCode'
   }
 ]
